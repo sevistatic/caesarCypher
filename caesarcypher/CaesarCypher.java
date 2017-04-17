@@ -1,4 +1,4 @@
-package ceasarCypher;
+package caesarCypher;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 //TODO remember how to package into a .jar file
 //TODO implement guards on helper methods
 
-public class CeasarCypher {
+public class CaesarCypher {
 	static Scanner scanner;
 
 	public static void main(String[] args) {
