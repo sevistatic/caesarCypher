@@ -13,7 +13,7 @@ public class CeasarCypher {
 	static Scanner scanner;
 
 	public static void main(String[] args) {
-		File file = new File("in.txt");
+		File file = new File("in1.txt");
 		String encodedString = new String();
 
 		try {
@@ -34,8 +34,8 @@ public class CeasarCypher {
 */
 	public static void displayAllShifts(String encodedString){
 		for (int amountToShift = 0; amountToShift < 26; amountToShift++){
-			String decodedString = shift(encodedString, amountToShift);
-			System.out.println(decodedString);
+			String decodedString = shiftRight(encodedString, amountToShift);
+			System.out.println(amountToShift + " -> " + decodedString);
 			System.out.println();
 		}
 	}
@@ -44,7 +44,7 @@ public class CeasarCypher {
 	* Shifts the letters in the string forward by the amount shifted, wrapping
 	* back to the beginning of the alphabet
 	*/
-	public static String shift(String encodedString, int amountToShift){
+	public static String shiftRight(String encodedString, int amountToShift){
 		ArrayList<Character> decodedCharArray = new ArrayList<Character>();
 
 		for (char character : encodedString.toLowerCase().toCharArray()){
